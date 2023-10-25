@@ -8,6 +8,11 @@ getgenv().Farm = false
 
 local Configs = {
     AutoFarmMob = false,
+    Busy = false,
+    
+    Stats = {
+        Deaths = 0,
+    },
 }
 
 local function GetMob()
@@ -28,6 +33,7 @@ task.spawn(function()
         end
     end
 end)
+-----------------------------------
 task.spawn(function()
 
 end)
