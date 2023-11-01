@@ -1,7 +1,9 @@
+repeat task.wait() until game.Players.LocalPlayer.Character
 local plr = game.Players.LocalPlayer
 local plrs = game.Players
 local char = plr.Character
 local HumRp = char:WaitForChild("HumanoidRootPart")
+local Humanoid = char:WaitForChild("Humanoid")
 local MobFolder = workspace:WaitForChild("Mobs")
 
 getgenv().Farm = false
@@ -23,6 +25,7 @@ local function GetMob()
     return currentMob
 end
 
+task.spawn(function()
 while true do task.wait()
 --//MobFarm
 task.spawn(function()
@@ -41,3 +44,4 @@ end)
 
 
 end
+end)
